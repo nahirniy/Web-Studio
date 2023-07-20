@@ -42,6 +42,7 @@ ol {
 }
 img {
     display: block;
+    max-width: 100%;
 }
 input,
 button {
@@ -131,6 +132,17 @@ button {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.48px;
+}
+@media (max-width: 767px) {
+    .nav-list,
+    .address-list {
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
 }
 
 /** ---------------------------------------- */
@@ -236,6 +248,20 @@ button {
     position: absolute;
     bottom: -1px;
     left: 0;
+}
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
 }
 
 /** ---------------------------------------- */
