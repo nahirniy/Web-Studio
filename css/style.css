@@ -855,10 +855,9 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    .header .container {
-        min-height: 70px;
-    }
-    .page-nav {
+    .container {
+        display: flex;
+        justify-content: space-between;
     }
     .nav-list,
     .address-list {
@@ -894,8 +893,12 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
         letter-spacing: 0.4px;
         padding: 0;
     }
-    .contact-link:hover,
-    .contact-link:focus {
+    .contact-link:hover {
+        color: var(--iris, #4d5ae5);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11;
+        letter-spacing: 0.72px;
     }
 }
 @media (min-width: 768px) {
