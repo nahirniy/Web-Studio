@@ -127,6 +127,22 @@ button {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.social-links-list {
+    display: flex;
+    gap: 16px;
+}
+.social-link {
+    background-color: var(--iris);
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
 .text-modal {
     color: var(--lightslate);
     font-size: 12px;
@@ -161,18 +177,19 @@ button {
 .header {
     background-color: var(--white);
     display: flex;
-    gap: 332px;
     box-shadow: 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
     border-bottom: 1px solid var(--cornflower);
 }
 .header .container {
     display: flex;
-    gap: 332px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav {
     display: flex;
     align-items: center;
+    margin-right: 332px;
 }
 .logo {
     color: var(--iris);
@@ -264,7 +281,7 @@ button {
 /** ---------------------------------------- */
 
 .menu-toggle {
-    min-height: 40px;
+    height: 40px;
     min-width: 40px;
     display: flex;
     align-items: center;
@@ -274,12 +291,13 @@ button {
     background-color: transparent;
     cursor: pointer;
     border: none;
-    border-radius: 50%;
     outline: none;
+    border-radius: 50%;
 }
 .menu-toggle:hover,
 .menu-toggle:focus {
     background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-container {
     position: fixed;
@@ -456,6 +474,7 @@ button {
 .customers-item {
     width: calc((100% - 120px) / 6);
     height: 88px;
+    flex-wrap: wrap;
 }
 .customers-link {
     padding: 16px 32px;
@@ -493,7 +512,7 @@ button {
     padding-top: 96px;
     padding-bottom: 120px;
 }
-.container .category-list {
+.category-list {
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -521,7 +540,6 @@ button {
 .btn-category:focus {
     background-color: var(--ocean);
     color: var(--white);
-    padding: 12px 24px;
     border-radius: 4px;
     border: 1px solid transparent;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08),
@@ -537,7 +555,6 @@ button {
     width: 360px;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -624,21 +641,6 @@ button {
 .social-links-box {
     margin-right: 80px;
 }
-.social-links-list {
-    display: flex;
-    gap: 16px;
-}
-.social-link {
-    background-color: var(--iris);
-    height: 40px;
-    width: 40px;
-    padding: 8px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .icon-social-link {
     width: 24px;
     height: 24px;
@@ -657,23 +659,11 @@ button {
     display: flex;
     gap: 24px;
 }
-.menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 80px 40px 40px;
-    background-color: var(--white);
-    z-index: 999;
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-}
 .input-subscribe {
     background-color: transparent;
     border-radius: 4px;
     border: 1px solid var(--white, #fff);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding-left: 16px;
     width: 264px;
     height: 40px;
@@ -854,16 +844,20 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
     fill: var(--cloud);
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .container {
-        display: flex;
+        width: 100%;
+        min-width: 320px;
+    }
+    .header-container {
         justify-content: space-between;
+        align-items: center;
     }
     .nav-list,
     .address-list {
         display: none;
     }
-    .logo {
+    .page-nav {
         margin-right: 0;
     }
     .nav-list-phone {
@@ -876,6 +870,7 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        margin-bottom: 48px;
     }
     .current::after,
     .current-portfolio::after {
@@ -893,12 +888,128 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
         letter-spacing: 0.4px;
         padding: 0;
     }
-    .contact-link:hover {
-        color: var(--iris, #4d5ae5);
+    .address-tel-link {
+        color: var(--iris);
         font-size: 36px;
         font-weight: 700;
         line-height: 1.11;
         letter-spacing: 0.72px;
+        white-space: nowrap;
+    }
+    .social-links-list {
+        gap: 56px;
+    }
+    .service {
+        padding: 112px 0;
+    }
+    .header-one {
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.72px;
+        width: 320px;
+        margin-bottom: 72px;
+    }
+    .modal-open {
+        width: 392px;
+    }
+    .feature {
+        padding: 96px 0;
+    }
+    .box-icon-feature {
+        display: none;
+    }
+    .feature-list {
+        flex-direction: column;
+        gap: 72px;
+    }
+    .feature-item {
+        align-items: center;
+        width: 100%;
+    }
+    .header-feature {
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.72px;
+    }
+    .feature-item .paragraph {
+        font-weight: 500;
+    }
+    .what-we-do {
+        display: none;
+    }
+    .section-team {
+        padding: 96px 0;
+    }
+    .team-member-list {
+        flex-direction: column;
+        gap: 72px;
+    }
+    .section-customers {
+        padding: 96px 0;
+    }
+    .container-customers {
+        max-width: 396px;
+    }
+    .customers-list {
+        flex-wrap: wrap;
+        gap: 72px 16px;
+    }
+    .customers-item {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+    .footer {
+        padding: 96px 0;
+    }
+    .footer-box {
+        flex-direction: column;
+        gap: 72px;
+        align-items: center;
+    }
+    .conclusion-box {
+        text-align: center;
+        margin-right: 0;
+    }
+    .social-links-box {
+        margin-right: 0;
+    }
+    .p-footer {
+        text-align: center;
+    }
+    .form-subscribe {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .category-list {
+        flex-wrap: wrap;
+        max-width: 268px;
+        margin-bottom: 48px;
+        row-gap: 16px;
+        justify-content: flex-start;
+    }
+    .btn-category {
+        padding: 8px 16px;
+    }
+    .portfolio-link {
+        width: 100%;
+    }
+}
+
+@media (max-width: 427px) {
+    .address-tel-link {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+    .social-links-list {
+        gap: 26px;
+    }
+    .header-one {
+        width: 300px;
+    }
+    .modal-open {
+        width: 315px;
+    }
+    .text-condition {
+        font-size: 8px;
     }
 }
 @media (min-width: 768px) {
