@@ -43,6 +43,7 @@ ol {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 input,
 button {
@@ -328,7 +329,7 @@ button {
 .service {
     padding: 188px 0px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+        url(../images/service-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -844,7 +845,7 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
     fill: var(--cloud);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .container {
         width: 100%;
         min-width: 320px;
@@ -989,8 +990,8 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
     .btn-category {
         padding: 8px 16px;
     }
-    .portfolio-link {
-        width: 100%;
+    .portfolio-list {
+        justify-content: center;
     }
 }
 
@@ -1011,9 +1012,122 @@ input[type='checkbox']:checked + .text-modal .span-checkbox-icon {
     .text-condition {
         font-size: 8px;
     }
+    .portfolio-link {
+        width: 100%;
+    }
+    .nav-list-phone {
+        margin-bottom: 200px;
+    }
 }
 @media (min-width: 768px) {
     .menu-toggle {
         display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 1157px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+    .header-container {
+        max-height: 72px;
+        align-items: center;
+    }
+    .logo {
+        margin-right: 120px;
+    }
+    .page-nav {
+        margin-right: 0;
+    }
+    .contact-link {
+        padding: 0;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.48px;
+    }
+    .address-list {
+        flex-direction: column;
+        gap: 12px;
+        margin-left: auto;
+    }
+    .box-icon-feature {
+        display: none;
+    }
+    .feature {
+        padding: 96px 0;
+    }
+    .feature-list {
+        min-width: 736px;
+        flex-wrap: wrap;
+        row-gap: 72px;
+    }
+    .feature-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+    .header-feature {
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.72px;
+    }
+    .feature-item .paragraph {
+        font-weight: 500;
+    }
+    .what-we-do {
+        display: none;
+    }
+    .section-team {
+        padding: 96px 0;
+    }
+    .team-member-list {
+        flex-wrap: wrap;
+        gap: 64px 24px;
+        max-width: 552px;
+        margin: 0 auto;
+    }
+    .team-member-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+    .section-customers {
+        padding: 96px 0;
+    }
+    .container-customers {
+        max-width: 552px;
+    }
+    .customers-list {
+        flex-wrap: wrap;
+        gap: 72px 16px;
+    }
+    .customers-item {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+    .footer {
+        padding: 96px 0;
+    }
+    .footer-box {
+        flex-wrap: wrap;
+        row-gap: 72px;
+        max-width: 552px;
+    }
+    .social-links-box {
+        margin-right: 0;
+    }
+    .conclusion-box {
+        margin-right: 24px;
+    }
+    .portfolio-section {
+        padding: 64px 0 96px 0;
+    }
+    .category-list {
+        margin-bottom: 64px;
+    }
+    .portfolio-list {
+        justify-content: start;
+        align-items: center;
+    }
+}
+@media (min-resolution: 192dpi) {
+    .service {
+        background-image: url(../images/service-bg@2x.jpg);
     }
 }
