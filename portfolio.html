@@ -20,7 +20,7 @@
         />
     </head>
     <body>
-        <!-- header -->
+        <!-- Header -->
         <header class="header">
             <div class="container header-container">
                 <nav class="page-nav">
@@ -34,15 +34,15 @@
                         <li>
                             <a
                                 href="./portfolio.html"
-                                class="menu-link link current-portfolio"
+                                class="menu-link current-portfolio link"
                                 >Portfolio</a
                             >
                         </li>
                         <li><a href="" class="menu-link link">Contacts</a></li>
                     </ul>
                 </nav>
-                <address class="address">
-                    <ul class="list address-list">
+                <address class="contact">
+                    <ul class="list contact-list">
                         <li>
                             <a href="mailto:info@devstudio.com" class="contact-link link"
                                 >info@devstudio.com</a
@@ -60,15 +60,16 @@
                     aria-expanded="false"
                     aria-controls="mobile-menu"
                 >
-                    <svg class="icon-menu-mobile" height="32" width="22">
+                    <svg class="icon-menu-mobile" height="22" width="32">
                         <use href="./images/icons.svg#icon-menu-mobile"></use>
                     </svg>
                 </button>
             </div>
         </header>
-        <!-- main -->
+
+        <!-- Main -->
         <main>
-            <!-- section about our portfolio -->
+            <!-- Section about our portfolio -->
             <section class="portfolio-section">
                 <div class="container">
                     <h1 class="visually-hidden">Services</h1>
@@ -92,7 +93,7 @@
                     <ul class="list portfolio-list">
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link">
-                                <div class="box-overlay">
+                                <div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-1.jpg    1x,
@@ -119,7 +120,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-2.jpg    1x,
@@ -145,7 +146,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-3.jpg    1x,
@@ -171,7 +172,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-4.jpg    1x,
@@ -197,11 +198,17 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
-                                    <img srcset=" ./images/portfolio-5.jpg 1x,
-                                    ./images/portfolio-5@2x.jpg 2x "
-                                    src="./images/portfolio-5.jpg"
-                                    alt="screen-Illustrations" width="3605 height="300" />
+                                ><div class="overlay-box">
+                                    <img
+                                        srcset="
+                                            ./images/portfolio-5.jpg    1x,
+                                            ./images/portfolio-5@2x.jpg 2x
+                                        "
+                                        src="./images/portfolio-5.jpg"
+                                        alt="screen-Illustrations"
+                                        width="360"
+                                        height="300"
+                                    />
 
                                     <p class="paragraph overlay">
                                         14 Stylish and User-Friendly App Design Concepts ·
@@ -217,7 +224,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-6.jpg    1x,
@@ -243,7 +250,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-7.jpg    1x,
@@ -271,7 +278,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-8.jpg    1x,
@@ -297,7 +304,7 @@
                         </li>
                         <li class="portfolio-item">
                             <a href="" class="link portfolio-link"
-                                ><div class="box-overlay">
+                                ><div class="overlay-box">
                                     <img
                                         srcset="
                                             ./images/portfolio-9.jpg    1x,
@@ -325,14 +332,15 @@
                 </div>
             </section>
         </main>
-        <!-- footer -->
+
+        <!-- Footer -->
         <footer class="footer">
-            <div class="container footer-box">
-                <div class="conclusion-box">
+            <div class="container footer-container">
+                <div class="footer-info-box">
                     <a href="./index.html" class="logo-footer link"
                         >Web<span class="studio">Studio</span></a
                     >
-                    <p class="conclusion">
+                    <p class="footer-info-p">
                         Increase the flow of customers and sales for your business with
                         digital marketing & growth solutions.
                     </p>
@@ -370,7 +378,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="box-form">
+                <div class="footer-form-box">
                     <p class="paragraph p-footer">Subscribe</p>
                     <form class="form-subscribe">
                         <label class="label-footer"
@@ -390,74 +398,78 @@
                 </div>
             </div>
         </footer>
+
         <!-- Menu on mobile device -->
         <div class="menu-container js-menu-container" id="mobile-menu">
-            <button class="close-modal js-close-menu">
-                <svg class="icon-close-modal" width="8" height="8">
+            <button class="close-btn js-close-menu">
+                <svg class="icon-close" width="8" height="8">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
             <nav class="page-nav">
-                <ul class="list nav-list-phone">
+                <ul class="list nav-list-mobile">
                     <li>
-                        <a href="./index.html" class="menu-link link current">Studio</a>
+                        <a href="./index.html" class="menu-link link">Studio</a>
                     </li>
                     <li>
-                        <a href="./portfolio.html" class="menu-link link">Portfolio</a>
+                        <a href="./portfolio.html" class="menu-link current link"
+                            >Portfolio</a
+                        >
                     </li>
                     <li><a href="" class="menu-link link">Contacts</a></li>
                 </ul>
             </nav>
-            <address class="address">
-                <ul class="list address-list-phone">
-                    <li>
-                        <a
-                            href="tel:+110001111111"
-                            class="contact-link address-tel-link link"
-                            >+11 (000) 111-11-11</a
-                        >
+            <div class="contact-mobile-box">
+                <address class="contact">
+                    <ul class="list contact-list-mobile">
+                        <li>
+                            <a
+                                href="tel:+110001111111"
+                                class="contact-link contact-tel-link link"
+                                >+11 (000) 111-11-11</a
+                            >
+                        </li>
+                        <li>
+                            <a href="mailto:info@devstudio.com" class="contact-link link"
+                                >info@devstudio.com</a
+                            >
+                        </li>
+                    </ul>
+                </address>
+                <ul class="list social-links-list">
+                    <li class="social-link-item">
+                        <a href="" class="social-link">
+                            <svg class="icon-social-link" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
                     </li>
-                    <li>
-                        <a href="mailto:info@devstudio.com" class="contact-link link"
-                            >info@devstudio.com</a
-                        >
+                    <li class="social-link-item">
+                        <a href="" class="social-link">
+                            <svg class="icon-social-link" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-link-item">
+                        <a href="" class="social-link">
+                            <svg class="icon-social-link" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-link-item">
+                        <a href="" class="social-link">
+                            <svg class="icon-social-link" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
-            </address>
-            <ul class="list social-links-list">
-                <li class="social-link-item">
-                    <a href="" class="social-link">
-                        <svg class="icon-social-link" width="24" height="24">
-                            <use href="./images/icons.svg#icon-instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-link-item">
-                    <a href="" class="social-link">
-                        <svg class="icon-social-link" width="24" height="24">
-                            <use href="./images/icons.svg#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-link-item">
-                    <a href="" class="social-link">
-                        <svg class="icon-social-link" width="24" height="24">
-                            <use href="./images/icons.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-link-item">
-                    <a href="" class="social-link">
-                        <svg class="icon-social-link" width="24" height="24">
-                            <use href="./images/icons.svg#icon-linkedin"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+            </div>
         </div>
 
         <!-- JS -->
-        <script src="./js/modal.js"></script>
         <script
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
