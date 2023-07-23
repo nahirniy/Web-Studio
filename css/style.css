@@ -925,6 +925,9 @@ button {
     .p-footer {
         text-align: center;
     }
+    .social-links-box .social-links-list {
+        gap: 16px;
+    }
     .form-subscribe {
         flex-direction: column;
         gap: 16px;
@@ -1007,7 +1010,7 @@ button {
 
 /** ---------------------------------------- */
 
-/** ----------COMPONENTS STYLE FOR ADAPTIVE---------- */
+/** ----------COMPONENTS STYLE FOR ADAPTIVE VERSION---------- */
 
 /** ---------------------------------------- */
 
@@ -1077,11 +1080,11 @@ button {
     .text-condition {
         font-size: 8px;
     }
-    .portfolio-link {
-        width: 100%;
+    .portfolio-info .header-three {
+        font-size: 16px;
     }
-    .nav-list-phone {
-        margin-bottom: 200px;
+    .portfolio-info .paragraph {
+        font-size: 12px;
     }
 }
 @media (min-width: 768px) {
